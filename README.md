@@ -19,22 +19,7 @@ This extension makes your Dash code easier to read by highlighting keywords, num
 
 ## 🧩 Example
 
-```dsh
-// Example Dash code
-var name = "Sam"
-var score = 42
-
-if (score >= 10) {
-    print name
-} else {
-    print "Too low"
-}
-
-/* Multi-line comment */
-do {
-    print "looping"
-} while (false)
-```
+![Dash Highlight Example](images/image.png)
 
 ---
 
