@@ -3,6 +3,7 @@
   "displayName": "dash-highlights",
   "description": "Syntax highlighting for the Dash language",
   "publisher": "SamuelCourchesne",
+  "type": "module",
   "main": "./extension.js",
   "activationEvents": [
     "onLanguage:dash"
