@@ -3,32 +3,43 @@
   "displayName": "dash-highlights",
   "description": "Syntax highlighting for the Dash language",
   "publisher": "SamuelCourchesne",
-  "version": "0.0.1",
+  "main": "./extension.js",
+  "activationEvents": ["onLanguage:dash"],
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.106.0"
   },
   "categories": [
     "Programming Languages"
   ],
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/Ap0llonn/dash-highlights"
   },
   "contributes": {
-    "languages": [{
-      "id": "dash",
-      "aliases": ["dash", "dash"],
-      "extensions": [".dsh"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./images/dash-icon.png",
-        "dark": "./images/dash-icon.png"
+    "languages": [
+      {
+        "id": "dash",
+        "aliases": [
+          "dash",
+          "dash"
+        ],
+        "extensions": [
+          ".dsh"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/dash-icon.png",
+          "dark": "./images/dash-icon.png"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "dash",
-      "scopeName": "source.dash",
-      "path": "./syntaxes/dash.tmLanguage.json"
-    }]
+    ],
+    "grammars": [
+      {
+        "language": "dash",
+        "scopeName": "source.dash",
+        "path": "./syntaxes/dash.tmLanguage.json"
+      }
+    ]
   }
 }
