@@ -1,0 +1,63 @@
+{
+    "Variable Declaration": {
+        "prefix": "var",
+        "body": [
+            "var ${1:name} = ${2:value};"
+        ],
+        "description": "Declare a variable"
+    },
+    "Print Statement": {
+        "prefix": "print",
+        "body": [
+            "print ${1:value};"
+        ],
+        "description": "Print a value"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition}) {",
+            " ",
+            "}"
+        ],
+        "description": "If statement"
+    },
+    "If else Statement": {
+        "prefix": "if else",
+        "body": [
+            "if (${1:condition}) {",
+            " ",
+            "} else {",
+            " ",
+            "}"
+        ],
+        "description": "if else statement"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            " ",
+            "}"
+        ],
+        "description": "While loop"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (${1:var i = 0}; ${2:i < condition}; ${3:i += 1}) {",
+            " ",
+            "}"
+        ],
+        "description": "For loop"
+    },
+    "Do While Loop": {
+        "prefix": "do",
+        "body": [
+            "do {",
+            " ",
+            "} while (${2:condition});"
+        ],
+        "description": "Do/While loop"
+    }
+}

@@ -42,6 +42,12 @@
         "scopeName": "source.dash",
         "path": "./syntaxes/dash.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "dash",
+        "path": "./snippets/dash.code-snippets"
+      }
     ]
   }
 }
