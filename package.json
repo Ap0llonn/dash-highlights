@@ -4,8 +4,10 @@
   "description": "Syntax highlighting for the Dash language",
   "publisher": "SamuelCourchesne",
   "main": "./extension.js",
-  "activationEvents": ["onLanguage:dash"],
-  "version": "1.0.0",
+  "activationEvents": [
+    "onLanguage:dash"
+  ],
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.106.0"
   },
