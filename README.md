@@ -1,65 +1,104 @@
-# dash-highlights README
+# Dash Highlights
 
-This is the README for your extension "dash-highlights". After writing up a brief description, we recommend including the following sections.
+**Dash Highlights** adds beautiful syntax highlighting for the **Dash programming language** (`.dsh` files) in Visual Studio Code.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+This extension makes your Dash code easier to read by highlighting keywords, numbers, strings, operators, and comments — all styled according to your active VS Code theme.
 
 ---
 
-## Working with Markdown
+## ✨ Features
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+- 🖋️ **Keywords** — Highlights language structures like `if`, `else`, `for`, `while`, `print`, `var`, etc.  
+- 💬 **Comments** — Supports both single-line (`//`) and block (`/* ... */`) comments.  
+- 🔢 **Literals** — Highlights numbers, strings, booleans (`true`, `false`), and `nil`.  
+- ⚙️ **Operators** — Color-coded mathematical and comparison operators (`+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`).  
+- 🎨 **Works with any theme** — Light or dark mode, the syntax integrates seamlessly.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🧩 Example
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+```dsh
+// Example Dash code
+var name = "Sam"
+var score = 42
 
-**Enjoy!**
+if (score >= 10) {
+    print name
+} else {
+    print "Too low"
+}
+
+/* Multi-line comment */
+do {
+    print "looping"
+} while (false)
+```
+
+---
+
+## 📦 Installation
+
+### 🔹 Option 1 — Local VSIX install
+1. Build your extension:
+   ```bash
+   vsce package
+   ```
+2. In VS Code, open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`).
+3. Select **“Extensions: Install from VSIX…”**.
+4. Choose the generated `dash-highlights-*.vsix` file.
+
+### 🔹 Option 2 — Marketplace (after publishing)
+1. Open the Extensions sidebar (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+2. Search for **Dash Highlights**.
+3. Click **Install**.
+
+---
+
+## ⚙️ Language Details
+
+| Property | Value |
+|-----------|-------|
+| **Language ID** | `dash` |
+| **File extension** | `.dsh` |
+| **Scope name** | `source.dash` |
+
+---
+
+## 🧠 Requirements
+
+No dependencies — Dash Highlights runs natively in Visual Studio Code.
+
+---
+
+## 🧩 Known Issues
+
+- Multi-line string highlighting not yet implemented.  
+- No IntelliSense or auto-completion .
+
+---
+
+## 🗒️ Release Notes
+
+### **1.0.0**
+- Initial release of Dash Highlights
+  - Syntax highlighting for keywords, operators, strings, numbers, booleans, and comments
+  - Support for `.dsh` files
+  - Compatible with all VS Code themes
+
+---
+
+## 💡 Contributing
+
+Contributions are welcome!  
+If you’d like to improve Dash Highlights or add new features (like IntelliSense or formatting), open an issue or pull request on GitHub.
+
+---
+
+## 📘 License
+
+MIT License © 2025 Samuel Courchesne
+
+---
+
+**Enjoy writing Dash with clean, vivid syntax highlighting!**
