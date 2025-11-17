@@ -1,5 +1,5 @@
 
-export function keyWordCompletions(vscode) {
+function keyWordCompletions(vscode) {
     const provider = vscode.languages.registerCompletionItemProvider(
         'dash',
         {
@@ -44,3 +44,5 @@ export function keyWordCompletions(vscode) {
     return provider;
 
 }
+
+module.exports = keyWordCompletions;

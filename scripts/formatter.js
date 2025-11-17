@@ -1,4 +1,4 @@
-export function formatteur(vscode) {
+function formatteur(vscode) {
     const formatter = vscode.languages.registerDocumentFormattingEditProvider(
         'dash',
         {
@@ -44,3 +44,5 @@ export function formatteur(vscode) {
 
     return formatter;
 }
+
+module.exports = formatteur;

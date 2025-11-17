@@ -1,4 +1,4 @@
-export function diagnosticProvider(vscode) {
+function diagnosticProvider(vscode) {
 
     const diagnosticCollection = vscode.languages.createDiagnosticCollection('dash');
 
@@ -48,3 +48,5 @@ export function diagnosticProvider(vscode) {
         diagnosticCollection.set(event.document.uri, diagnostics);
     });
 }
+
+module.exports = diagnosticProvider;

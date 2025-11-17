@@ -1,4 +1,4 @@
-export function hoverProvider(vscode) {
+function hoverProvider(vscode) {
     const hoverProvider = vscode.languages.registerHoverProvider('dash', {
         provideHover(document, position) {
 
@@ -28,3 +28,4 @@ export function hoverProvider(vscode) {
 
     return hoverProvider;
 }
+module.exports = hoverProvider;

@@ -1,90 +1,100 @@
 # Dash Highlights
 
-**Dash Highlights** adds beautiful syntax highlighting for the **Dash programming language** (`.dsh` files) in Visual Studio Code.
-
-This extension makes your Dash code easier to read by highlighting keywords, numbers, strings, operators, and comments — all styled according to your active VS Code theme.
+**Dash Highlights** provides full language support for the **Dash programming language** (`.dsh`) in Visual Studio Code — including syntax highlighting, IntelliSense, snippets, formatting, diagnostics, and more.
 
 ---
 
 ## ✨ Features
 
-- 🖋️ **Keywords** — Highlights language structures like `if`, `else`, `for`, `while`, `print`, `var`, etc.  
-- 💬 **Comments** — Supports both single-line (`//`) and block (`/* ... */`) comments.  
-- 🔢 **Literals** — Highlights numbers, strings, booleans (`true`, `false`), and `nil`.  
-- ⚙️ **Operators** — Color-coded mathematical and comparison operators (`+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`).  
-- 🧩 **Custom file icon** — Displays a unique Dash icon beside `.dsh` files in VS Code’s explorer.  
-- 🎨 **Works with any theme** — Light or dark mode, the syntax integrates seamlessly.
+### 🖋️ Syntax Highlighting
+Beautiful highlighting for:
+- Keywords (`var`, `if`, `else`, `while`, `for`, `do`, `print`, etc.)
+- Operators (`+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`, `=`)
+- Strings (`"hello"`)
+- Numbers (`123`, `12.56`)
+- Booleans (`true`, `false`)
+- `nil` literal
+- Identifiers
+- Single-line and block comments
+
+### 🧠 IntelliSense
+- Keyword completion  
+- Dynamic variable completion  
+- Hover tooltips for keywords  
+
+### 🧩 Snippets
+Quick snippets for:
+- `var`
+- `if`
+- `else`
+- `while`
+- `for`
+- `do/while`
+- `print`
+
+### 🧼 Code Formatter
+Format Dash code using:
+- **Shift + Alt + F** (Windows)
+- **Shift + Option + F** (macOS)
+
+### 🚨 Diagnostics
+Live error detection:
+- Missing semicolons  
+- Incomplete variable declarations  
+
+### 📁 Custom File Icon
+Unique icon for `.dsh` files.
 
 ---
 
 ## 🧩 Example
 
-![Dash Highlight Example](images/image.png)
+![Dash Highlight Example](images/exemple1.png)
+
+![Dash Error Example](images/image.png)
 
 ---
 
 ## 📦 Installation
 
-### 🔹 Option 1 — Local VSIX install
-1. Build your extension:
-   ```bash
-   vsce package
-   ```
-2. In VS Code, open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`).
-3. Select **“Extensions: Install from VSIX…”**.
-4. Choose the generated `dash-highlights-*.vsix` file.
+### Local VSIX Install
 
-### 🔹 Option 2 — Marketplace (after publishing)
-1. Open the Extensions sidebar (`Ctrl+Shift+X` or `Cmd+Shift+X`).
-2. Search for **Dash Highlights**.
-3. Click **Install**.
+```bash
+vsce package
+```
+
+Then in VS Code:
+1. Open Command Palette  
+2. Select *Install from VSIX...*  
+3. Choose the generated `.vsix` file  
+
+### Marketplace
+Search **Dash Highlights** in the Extensions panel.
 
 ---
 
 ## ⚙️ Language Details
 
-| Property | Value |
-|-----------|-------|
-| **Language ID** | `dash` |
-| **File extension** | `.dsh` |
-| **Scope name** | `source.dash` |
-
----
-
-## 🧠 Requirements
-
-No dependencies — Dash Highlights runs natively in Visual Studio Code.
+| Property      | Value         |
+|---------------|---------------|
+| Language ID   | `dash`        |
+| Extension     | `.dsh`        |
+| Scope name    | `source.dash` |
 
 ---
 
 ## 🧩 Known Issues
-
-- Multi-line string highlighting not yet implemented.  
-- No IntelliSense or auto-completion .
-
----
-
-## 🗒️ Release Notes
-
-### **1.0.0**
-- Initial release of Dash Highlights
-  - Syntax highlighting for keywords, operators, strings, numbers, booleans, and comments
-  - Support for `.dsh` files
-  - Compatible with all VS Code themes
+- Multiline strings not implemented  
+- Basic formatter (not AST–based)  
+- No cross-file IntelliSense  
 
 ---
 
-## 💡 Contributing
+## 📝 Release Notes
 
-Contributions are welcome!  
-If you’d like to improve Dash Highlights or add new features (like IntelliSense or formatting), open an issue or pull request on GitHub.
+### **1.2.x**
+- Added snippets  
+- Added hover tooltips  
+- Added variable completion  
+- Added diagnostics  
 
----
-
-## 📘 License
-
-MIT License © 2025 Samuel Courchesne
-
----
-
-**Enjoy writing Dash with clean, vivid syntax highlighting!**
