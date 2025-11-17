@@ -7,7 +7,7 @@
   "activationEvents": [
     "onLanguage:dash"
   ],
-  "version": "1.2.3",
+  "version": "1.2.4",
   "engines": {
     "vscode": "^1.106.0"
   },
