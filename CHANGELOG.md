@@ -1,9 +1,25 @@
-# Change Log
+# Changelog
 
-All notable changes to the "dash-highlights" extension will be documented in this file.
+## [1.2.0] - 2025-11-17
+### Added
+- Added IntelliSense support for dynamic variables in Dash files.
+- Added keyword autocompletion.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Changed
+- Updated extension activation logic.
+- Improved internal structure for future LSP support.
 
-## [Unreleased]
+### Fixed
+- Minor grammar highlight adjustments.
 
-- Initial release
+---
+
+## [1.1.0] - 2025-11-17
+### Added
+- Initial IntelliSense foundation (static keywords).
+
+---
+
+## [0.0.1] - 2025-11-17
+### Added
+- Initial release of Dash Highlights.
