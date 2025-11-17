@@ -4,13 +4,10 @@
 ### Added
 - Added IntelliSense support for dynamic variables in Dash files.
 - Added keyword autocompletion.
-
-### Changed
-- Updated extension activation logic.
-- Improved internal structure for future LSP support.
+- Added code formating.
 
 ### Fixed
-- Minor grammar highlight adjustments.
+- Comments now correctly display in gray.
 
 ---
 

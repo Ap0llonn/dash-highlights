@@ -3,13 +3,27 @@
   "name": "dash",
   "scopeName": "source.dash",
   "patterns": [
-    { "include": "#keywords" },
-    { "include": "#operators" },
-    { "include": "#literals" },
-    { "include": "#identifiers" },
-    { "include": "#strings" },
-    { "include": "#numbers" },
-    { "include": "#comments" }
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#literals"
+    },
+    {
+      "include": "#identifiers"
+    }
   ],
   "repository": {
     "keywords": {
@@ -49,7 +63,10 @@
       "begin": "\"",
       "end": "\"",
       "patterns": [
-        { "name": "constant.character.escape.dash", "match": "\\\\." }
+        {
+          "name": "constant.character.escape.dash",
+          "match": "\\\\."
+        }
       ]
     },
     "numbers": {
@@ -63,11 +80,11 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.double-slash.dash",
+          "name": "comment.line.double-slash.dash comment.line",
           "match": "//.*$"
         },
         {
-          "name": "comment.block.dash",
+          "name": "comment.block.dash comment.block",
           "begin": "/\\*",
           "end": "\\*/"
         }
