@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.4] - 2025-11-17
+### Added
+- Added more error message
+
 ## [1.2.2] - 2025-11-17
 ### Changed
 - ESM migration.
