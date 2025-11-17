@@ -14,7 +14,11 @@
       "id": "dash",
       "aliases": ["dash", "dash"],
       "extensions": [".dsh"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./images/dash-icon.png",
+        "dark": "./images/dash-icon.png"
+      }
     }],
     "grammars": [{
       "language": "dash",
