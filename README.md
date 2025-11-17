@@ -12,6 +12,7 @@ This extension makes your Dash code easier to read by highlighting keywords, num
 - 💬 **Comments** — Supports both single-line (`//`) and block (`/* ... */`) comments.  
 - 🔢 **Literals** — Highlights numbers, strings, booleans (`true`, `false`), and `nil`.  
 - ⚙️ **Operators** — Color-coded mathematical and comparison operators (`+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`).  
+- 🧩 **Custom file icon** — Displays a unique Dash icon beside `.dsh` files in VS Code’s explorer.  
 - 🎨 **Works with any theme** — Light or dark mode, the syntax integrates seamlessly.
 
 ---
