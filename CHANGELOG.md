@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.2] - 2025-11-17
+### Changed
+- ESM migration.
+
 ## [1.2.0] - 2025-11-17
 ### Added
 - Added IntelliSense support for dynamic variables in Dash files.
