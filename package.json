@@ -1,0 +1,25 @@
+{
+  "name": "dash-highlights",
+  "displayName": "dash-highlights",
+  "description": "Syntax highlighting for the Dash language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "dash",
+      "aliases": ["dash", "dash"],
+      "extensions": [".dsh"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "dash",
+      "scopeName": "source.dash",
+      "path": "./syntaxes/dash.tmLanguage.json"
+    }]
+  }
+}
