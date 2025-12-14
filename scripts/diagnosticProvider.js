@@ -15,10 +15,10 @@ function diagnosticProvider(vscode) {
             const nextLine = lines[i + 1] ? lines[i + 1].trim() : "";
 
             // --------------------------------------------
-            // ERROR 1: Incomplete var:  var x =
+            // ERROR 1: Incomplete let:  let x =
             // --------------------------------------------
-            const incompleteVar = /^var\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*$/;
-            if (incompleteVar.test(line)) {
+            const incompleteLet = /^let\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*$/;
+            if (incompleteLet.test(line)) {
                 const range = new vscode.Range(
                     new vscode.Position(i, 0),
                     new vscode.Position(i, rawLine.length)
@@ -33,7 +33,7 @@ function diagnosticProvider(vscode) {
             // --------------------------------------------
             // ERROR 2: Missing semicolon on simple statements
             // --------------------------------------------
-            const simpleStmt = /^(print|var|[a-zA-Z_][a-zA-Z0-9_]*)/;
+            const simpleStmt = /^(print|let|[a-zA-Z_][a-zA-Z0-9_]*)/;
             if (
                 simpleStmt.test(line) &&
                 !line.endsWith(";") &&

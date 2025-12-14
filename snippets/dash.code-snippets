@@ -1,8 +1,8 @@
 {
     "Variable Declaration": {
-        "prefix": "var",
+        "prefix": "let",
         "body": [
-            "var ${1:name} = ${2:value};"
+            "let ${1:name} = ${2:value};"
         ],
         "description": "Declare a variable"
     },
@@ -45,7 +45,7 @@
     "For Loop": {
         "prefix": "for",
         "body": [
-            "for (${1:var i = 0}; ${2:i < condition}; ${3:i += 1}) {",
+            "for (${1:let i = 0}; ${2:i < condition}; ${3:i += 1}) {",
             " ",
             "}"
         ],

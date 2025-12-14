@@ -8,7 +8,7 @@
 
 ### 🖋️ Syntax Highlighting
 Beautiful highlighting for:
-- Keywords (`var`, `if`, `else`, `while`, `for`, `do`, `print`, etc.)
+- Keywords (`let`, `if`, `else`, `while`, `for`, `do`, `print`, etc.)
 - Operators (`+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`, `=`)
 - Strings (`"hello"`)
 - Numbers (`123`, `12.56`)
@@ -24,7 +24,7 @@ Beautiful highlighting for:
 
 ### 🧩 Snippets
 Quick snippets for:
-- `var`
+- `let`
 - `if`
 - `else`
 - `while`
@@ -97,4 +97,3 @@ Search **Dash Highlights** in the Extensions panel.
 - Added hover tooltips  
 - Added variable completion  
 - Added diagnostics  
-

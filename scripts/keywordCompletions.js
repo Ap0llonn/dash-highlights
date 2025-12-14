@@ -7,16 +7,16 @@ function keyWordCompletions(vscode) {
 
                 const text = document.getText();
 
-                const varRegex = /\bvar\s+([a-zA-Z_][a-zA-Z0-9_]*)/g;
+                const letRegex = /\blet\s+([a-zA-Z_][a-zA-Z0-9_]*)/g;
                 const variables = [];
                 let match;
 
-                while ((match = varRegex.exec(text)) !== null) {
+                while ((match = letRegex.exec(text)) !== null) {
                     variables.push(match[1]);
                 }
 
                 const keywords = [
-                    'var', 'print', 'if', 'else',
+                    'let', 'print', 'if', 'else',
                     'while', 'for', 'do', 'nil',
                     'true', 'false'
                 ];
