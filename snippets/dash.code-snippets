@@ -13,6 +13,15 @@
         ],
         "description": "Print a value"
     },
+    "Function Declaration": {
+        "prefix": "function",
+        "body": [
+            "function ${1:name}(${2:params}) {",
+            "    ${0}",
+            "}"
+        ],
+        "description": "Declare a function"
+    },
     "If Statement": {
         "prefix": "if",
         "body": [

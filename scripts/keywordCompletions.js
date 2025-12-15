@@ -16,7 +16,7 @@ function keyWordCompletions(vscode) {
                 }
 
                 const keywords = [
-                    'let', 'print', 'if', 'else',
+                    'let', 'function', 'print', 'if', 'else',
                     'while', 'for', 'do', 'nil',
                     'true', 'false'
                 ];

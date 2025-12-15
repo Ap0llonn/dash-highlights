@@ -8,7 +8,7 @@
 
 ### 🖋️ Syntax Highlighting
 Beautiful highlighting for:
-- Keywords (`let`, `if`, `else`, `while`, `for`, `do`, `print`, etc.)
+- Keywords (`let`, `function`, `if`, `else`, `while`, `for`, `do`, `print`, etc.)
 - Operators (`+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`, `=`)
 - Strings (`"hello"`)
 - Numbers (`123`, `12.56`)
@@ -25,6 +25,7 @@ Beautiful highlighting for:
 ### 🧩 Snippets
 Quick snippets for:
 - `let`
+- `function`
 - `if`
 - `else`
 - `while`

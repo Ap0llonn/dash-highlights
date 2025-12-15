@@ -30,7 +30,7 @@
       "patterns": [
         {
           "name": "keyword.control.dash",
-          "match": "\\b(let|if|else|for|while|do|print|return|true|false|nil)\\b"
+          "match": "\\b(let|function|if|else|for|while|do|print|return|true|false|nil)\\b"
         }
       ]
     },

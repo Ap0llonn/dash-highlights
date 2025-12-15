@@ -35,6 +35,7 @@ function diagnosticProvider(vscode) {
             // --------------------------------------------
             const simpleStmt = /^(print|let|[a-zA-Z_][a-zA-Z0-9_]*)/;
             if (
+                !line.startsWith("function") &&
                 simpleStmt.test(line) &&
                 !line.endsWith(";") &&
                 !line.endsWith("{") &&
@@ -53,7 +54,68 @@ function diagnosticProvider(vscode) {
             }
 
             // --------------------------------------------
-            // ERROR 3: Standalone keywords like "while"
+            // ERROR 3: Function declaration grammar checks
+            // function IDENTIFIER "(" parameters? ")" block
+            // --------------------------------------------
+            if (line.startsWith("function")) {
+                const hasName = /^function\s+[a-zA-Z_][a-zA-Z0-9_]*/.test(line);
+                if (!hasName) {
+                    const range = new vscode.Range(
+                        new vscode.Position(i, 0),
+                        new vscode.Position(i, rawLine.length)
+                    );
+                    diagnostics.push(new vscode.Diagnostic(
+                        range,
+                        "Function name expected after 'function'.",
+                        vscode.DiagnosticSeverity.Error
+                    ));
+                }
+
+                const hasOpeningParen = line.includes("(");
+                const hasClosingParen = line.includes(")");
+
+                if (!hasOpeningParen) {
+                    const range = new vscode.Range(
+                        new vscode.Position(i, 0),
+                        new vscode.Position(i, rawLine.length)
+                    );
+                    diagnostics.push(new vscode.Diagnostic(
+                        range,
+                        "Missing '(' after function name.",
+                        vscode.DiagnosticSeverity.Error
+                    ));
+                } else if (!hasClosingParen) {
+                    const range = new vscode.Range(
+                        new vscode.Position(i, 0),
+                        new vscode.Position(i, rawLine.length)
+                    );
+                    diagnostics.push(new vscode.Diagnostic(
+                        range,
+                        "Missing closing ')' in parameter list.",
+                        vscode.DiagnosticSeverity.Error
+                    ));
+                }
+
+                if (hasOpeningParen && hasClosingParen) {
+                    const hasBlockSameLine = line.includes("{");
+                    const nextLineHasBlock = nextLine.startsWith("{");
+
+                    if (!hasBlockSameLine && !nextLineHasBlock) {
+                        const range = new vscode.Range(
+                            new vscode.Position(i, 0),
+                            new vscode.Position(i, rawLine.length)
+                        );
+                        diagnostics.push(new vscode.Diagnostic(
+                            range,
+                            "Expected '{' to start function body after declaration.",
+                            vscode.DiagnosticSeverity.Error
+                        ));
+                    }
+                }
+            }
+
+            // --------------------------------------------
+            // ERROR 4: Standalone keywords like "while"
             // --------------------------------------------
             const standaloneKeywords = ["if", "else", "while", "for", "do"];
             if (standaloneKeywords.includes(line)) {
@@ -69,7 +131,7 @@ function diagnosticProvider(vscode) {
             }
 
             // --------------------------------------------
-            // ERROR 4: Missing parentheses for if/while
+            // ERROR 5: Missing parentheses for if/while
             // --------------------------------------------
             if (
                 (line.startsWith("if ") || line.startsWith("while ")) &&
@@ -88,7 +150,7 @@ function diagnosticProvider(vscode) {
             }
 
             // --------------------------------------------
-            // ERROR 5: Incomplete 'for' header
+            // ERROR 6: Incomplete 'for' header
             // --------------------------------------------
             if (line.startsWith("for (") && !line.includes(")")) {
                 const range = new vscode.Range(
@@ -103,7 +165,7 @@ function diagnosticProvider(vscode) {
             }
 
             // --------------------------------------------
-            // ERROR 6: Expected '{' after control statement
+            // ERROR 7: Expected '{' after control statement
             // --------------------------------------------
             if (
                 (line.startsWith("if") || line.startsWith("while") || line.startsWith("for")) &&
